@@ -2,32 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    /* white background */
+    --foreground: 186 85% 25%;
+    /* dark teal text */
+    --card: 186 72% 95%;
+    /* light teal card */
+    --card-foreground: 186 85% 25%;
+    --popover: 186 72% 95%;
+    --popover-foreground: 186 85% 25%;
+    --primary: 186 85% 35%;
+    /* primary teal color */
+    --primary-foreground: 0 0% 100%;
+    /* white */
+    --secondary: 186 85% 45%;
+    /* lighter teal */
+    --secondary-foreground: 186 85% 25%;
+    --muted: 186 72% 85%;
+    /* muted light teal */
+    --muted-foreground: 186 85% 45%;
+    --accent: 186 85% 55%;
+    /* accent teal */
+    --accent-foreground: 186 85% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 186 72% 80%;
+    /* light border teal */
+    --input: 186 72% 80%;
+    /* light input teal */
+    --ring: 186 85% 35%;
+    /* teal ring */
+    --radius: 0.5rem;
+    --chart-1: 186 85% 35%;
+    /* teal chart color */
+    --chart-2: 186 75% 45%;
+    /* lighter teal */
+    --chart-3: 186 65% 25%;
+    /* darker teal */
+    --chart-4: 186 85% 55%;
+    /* vivid teal */
+    --chart-5: 186 95% 50%;
+    /* bright teal */
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    /* dark background */
+    --foreground: 186 72% 93%;
+    /* light teal text */
+    --card: 186 85% 20%;
+    /* darker teal card */
+    --card-foreground: 186 72% 93%;
+    --popover: 186 85% 20%;
+    --popover-foreground: 186 72% 93%;
+    --primary: 186 85% 35%;
+    /* primary teal color */
+    --primary-foreground: 0 0% 100%;
+    /* white */
+    --secondary: 186 85% 25%;
+    /* slightly darker teal */
+    --secondary-foreground: 186 72% 93%;
+    --muted: 186 85% 25%;
+    /* muted dark teal */
+    --muted-foreground: 186 72% 80%;
+    /* softer teal */
+    --accent: 186 85% 25%;
+    /* accent dark teal */
+    --accent-foreground: 186 72% 93%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 186 85% 25%;
+    /* dark border teal */
+    --input: 186 85% 25%;
+    /* dark input teal */
+    --ring: 186 85% 35%;
+    /* teal ring */
+    --chart-1: 186 85% 35%;
+    /* teal chart color */
+    --chart-2: 186 75% 45%;
+    /* lighter teal */
+    --chart-3: 186 65% 25%;
+    /* darker teal */
+    --chart-4: 186 85% 55%;
+    /* vivid teal */
+    --chart-5: 186 95% 50%;
+    /* bright teal */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer base {
+  * {
+    @apply border-border;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-background text-foreground;
   }
 }
