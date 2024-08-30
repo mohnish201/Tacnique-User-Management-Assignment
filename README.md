@@ -1,4 +1,11 @@
+# User Management Application
+
+Deployed Link : https://tacnique-user-management-assignment.vercel.app/
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+![image](https://github.com/user-attachments/assets/fc28131c-ef56-4ddd-bb19-d034f9d132ac)
+
 
 ## Getting Started
 
